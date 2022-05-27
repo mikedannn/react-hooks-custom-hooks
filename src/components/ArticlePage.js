@@ -21,9 +21,7 @@ function ArticlePage() {
 
   // set the document title
   const pageTitle = post ? `Underreacted | ${post.title}` : "Underreacted";
-  useEffect(() => {
-    document.title = pageTitle;
-  }, [pageTitle]);
+  useDocumentTitle(pageTitle);
 
   if (!isLoaded) return <h3>Loading...</h3>;
 
